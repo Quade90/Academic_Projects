@@ -1,0 +1,34 @@
+/*ofstream filep("C:\\Users\\Jason\\Desktop\\Study Material\\PH1050\\Project\\datap.txt");
+    double count = 0;
+    for(double i : spinsp){
+        filep << i/N*N << ' ' << energiesp[count] << ' ' << count << endl;
+        count++;
+    }
+    filep.close();
+    
+    result = metropolis(lattice_n, times, 0.2, get_energy(lattice_n));
+    vector<double> spinsn = result.first;
+    vector<double> energiesn = result.second;
+    
+    ofstream filen("C:\\Users\\Jason\\Desktop\\Study Material\\PH1050\\Project\\datan.txt");
+    count = 0;
+    for(double i : spinsn){
+        filen << i/N*N << ' ' << energiesn[count] << ' ' << count << endl;
+        count++;
+    }
+    filen.close();
+    
+    ofstream filebj("C:\\Users\\Jason\\Desktop\\Study Material\\PH1050\\Project\\databj.txt");
+    vector<double> bjs;
+    for(double bj = 0.1; bj<=2; bj+=0.05){
+        auto metrop = metropolis(lattice_p, times, bj, get_energy(lattice_p));
+        vector<double> spinsp = metrop.first;
+        double avgSpinp = accumulate(spinsp.begin(), spinsp.end(), 0.0) / (spinsp.size()*N*N);
+        auto metron = metropolis(lattice_n, times, bj, get_energy(lattice_n));
+        vector<double> spinsn = metron.first;
+        double avgSpinn = accumulate(spinsn.begin(), spinsn.end(), 0.0) / (spinsn.size()*N*N);
+        filebj << bj << ' ' << avgSpinp << ' ' << avgSpinn << endl;
+    }
+    filebj.close();
+
+*/
